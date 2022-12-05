@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <p>{{country + " situated at"}} where?!</p>
+    <p>{{getCapital()}}</p>
+    <input id={{countyId}} placeholder="Search Countries" value="Mexico" disabled="{{isDisabled}}">
+    <p [ngClass]="messageClasses">In Europe!</p>
+    <p [ngStyle]="titleStyles">In North America</p>
+    <button class="btn btn-secondary" (click)="showMap($event)">Check!</button>
+    {{map}}
+    <br><br>
+    <input type="text" [(ngModel)]="population">
+    {{population}}
+    <br><br>
+    <div *ngIf="!isLang; then thenBlock; else elseBlock"></div>
+
+    <ng-template #thenBlock>
+        <h5>French</h5>
+    </ng-template>
+
+    <ng-template #elseBlock>
+        <h5>English</h5>
+    </ng-template>
+
+    <div [ngSwitch]="flagColor">
+        <div *ngSwitchCase="'blue'">Add white & red</div>
+        <div *ngSwitchCase="'white'">Add blue & red</div>
+        <div *ngSwitchCase="'red'">Add white & blue</div>
+        <div *ngSwitchDefault>Add blue, white & red</div>
+    </div>
+    <br>
+    <div *ngFor="let state of states; index as i">{{i+1}}. {{state}}</div>
+    <!--Parent to child data passing-->
+    <h6 class="py-3">{{mode}}</h6>
+    <button class="btn btn-secondary" (click)="fireEvent()">See Map!</button>
+    <button class="btn btn-success mx-3" routerLink="/asians">See Asian Countries</button>
+</div>

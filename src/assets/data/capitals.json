@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "country": "Algeria",
+      "capital": "Algeris"
+    },
+    {
+      "id": 2,
+      "country": "Mali",
+      "capital": "Bamako"
+    },
+    {
+      "id": 3,
+      "country": "Egypt",
+      "capital": "Cairo"
+    },
+    {
+      "id": 4,
+      "country": "Libya",
+      "capital": "Tripoli"
+    },
+    {
+        "id": 5,
+        "country": "Morocco",
+        "capital": "Rabat"
+    }
+  ]

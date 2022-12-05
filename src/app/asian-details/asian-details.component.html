@@ -1,0 +1,26 @@
+<div class="container mt-5">
+    <div [ngSwitch]="countryId">
+        <div *ngSwitchCase=1>
+            <p>Japan is an island country in East Asia. It is situated in the northwest Pacific Ocean, and is bordered on the west by the Sea of Japan, while extending from the Sea of Okhotsk in the north toward the East China Sea, Philippine Sea, and Taiwan in the south.</p>
+        </div>
+        <div *ngSwitchCase=2>
+            <p>South Korea, an East Asian nation on the southern half of the Korean Peninsula, shares one of the world’s most heavily militarized borders with North Korea. It’s equally known for its green, hilly countryside dotted with cherry trees and centuries-old Buddhist temples, plus its coastal fishing villages, sub-tropical islands and high-tech cities such as Seoul, the capital.</p>
+        </div>
+        <div *ngSwitchCase=3>
+            <p>Malaysia is a Southeast Asian country occupying parts of the Malay Peninsula and the island of Borneo. It's known for its beaches, rainforests and mix of Malay, Chinese, Indian and European cultural influences. The capital, Kuala Lumpur, is home to colonial buildings, busy shopping districts such as Bukit Bintang and skyscrapers such as the iconic, 451m-tall Petronas Twin Towers.</p>
+        </div>
+        <div *ngSwitchCase=4>
+            <p>Thailand is a Southeast Asian country. It's known for tropical beaches, opulent royal palaces, ancient ruins and ornate temples displaying figures of Buddha. In Bangkok, the capital, an ultramodern cityscape rises next to quiet canalside communities and the iconic temples of Wat Arun, Wat Pho and the Emerald Buddha Temple (Wat Phra Kaew). Nearby beach resorts include bustling Pattaya and fashionable Hua Hin.</p>
+        </div>
+        <div *ngSwitchCase=5>
+            <p>Singapore, officially the Republic of Singapore, is a sovereign island country and city-state in maritime Southeast Asia.</p>
+        </div>
+        <router-outlet></router-outlet>
+        <button class="btn btn-warning" (click)="goMaps()">2D Map View</button><br>
+        <button class="btn btn-danger mt-5" (click)="goPrev()">Previous</button>
+        <button class="btn btn-danger mt-5 mx-4" (click)="goNext()">Next</button>
+    </div>
+    <div>
+        <button class="btn btn-dark mt-5" (click)="goBack()">Back</button>
+    </div>
+</div>
